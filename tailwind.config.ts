@@ -15,6 +15,7 @@ const config: Config = {
         tc: {
           text_dark: "#393939",
           text_gray: "#AEAEAE",
+          heading_gray: "#404040",
         },
         pc: {
           light: "#FFFFFF",
@@ -31,6 +32,9 @@ const config: Config = {
             "400": "#FDC360",
           },
         },
+      },
+      fontFamily: {
+        general: ["General Sans", "sans-serif"],
       },
       container: {
         // center: true,

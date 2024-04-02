@@ -1,8 +1,39 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import local from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const general = local({
+  src: [
+    {
+      path: "../../public/fonts/GeneralSans-Extralight.ttf",
+      weight: "200",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Light.ttf",
+      weight: "300",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Semibold.ttf",
+      weight: "600",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Bold.ttf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-generalSans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={` ${general.variable} bg-pc-almost_white `}>
+        {children}
+      </body>
     </html>
   );
 }
