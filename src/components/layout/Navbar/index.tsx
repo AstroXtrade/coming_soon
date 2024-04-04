@@ -1,8 +1,9 @@
-"use-client";
+"use client";
 import React from "react";
 import Icon from "@/components/icons";
 import Button from "@/components/global/Button";
 import ModeToggle from "@/components/global/ModeToggle";
+import LanguageSwitch from "@/components/global/LanguageSwitch";
 
 const Navbar = () => {
   const redirectToContactPage = () => {};
@@ -17,6 +18,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className=" flex items-center gap-[24px]   ">
+        <LanguageSwitch />
         <ModeToggle />
         <Button
           btnText="Contact Us"
