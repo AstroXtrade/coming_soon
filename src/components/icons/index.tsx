@@ -12,6 +12,11 @@ import Vk from "../../../public/icons/vk.svg";
 import X from "../../../public/icons/x.svg";
 import Instagram from "../../../public/icons/instagram-solid.svg";
 
+// country flag icons
+import fr from "../../../public/icons/fr.svg";
+import ru from "../../../public/icons/ru.svg";
+import en from "../../../public/icons/gb.svg";
+
 const Icon = {
   LogoMark,
   LogoTextBlack,
@@ -24,6 +29,9 @@ const Icon = {
   Vk,
   X,
   Instagram,
+  fr,
+  en,
+  ru,
 };
 
 export default Icon;

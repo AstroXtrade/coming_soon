@@ -19,7 +19,7 @@ export default function Home({
     <section className="h-full w-full relative ">
       <Navbar />
       <section className=" max-w-[75rem] mx-auto h-[90%] pt-[1.5rem] px-[1rem] relative ">
-        <div className=" w-[40%] absolute right-0 top-[3%] 2xl:top-[10%]  ">
+        <div className=" w-[40%] absolute right-0 top-[2%] 2xl:top-[10%]  ">
           <Image src={lighImage} alt="world_map" />
         </div>
         <div className=" top-[-50%] translate-y-[5%] 2xl:translate-y-[20%]  ">
