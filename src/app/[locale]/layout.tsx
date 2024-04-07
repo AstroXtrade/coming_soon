@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import local from "next/font/local";
 import "../globals.css";
+import Providers from "../providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,13 +49,15 @@ export default function LocaleLayout({
   params: { locale: string };
 }) {
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={` ${general.variable} bg-pc-almost_white `}>
-        {children}
-        <p className=" mt-auto text-center pb-[24px] pt-[48px] 2xl:mt-[-48px] 2xl:pt-[0px] font-general text-tc-heading_gray ">
-          {" "}
-          Copyright © 2024 AstroXtrade - All Rights Reserved.{" "}
-        </p>
+        <Providers>
+          {children}
+          <p className=" mt-auto text-center pb-[24px] pt-[48px] 2xl:mt-[-48px] 2xl:pt-[0px] font-general text-tc-heading_gray ">
+            {" "}
+            Copyright © 2024 AstroXtrade - All Rights Reserved.{" "}
+          </p>
+        </Providers>
       </body>
     </html>
   );
