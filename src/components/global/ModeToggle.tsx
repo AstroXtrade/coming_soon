@@ -9,8 +9,6 @@ const ModeToggle = () => {
   useEffect(() => {
     setIsMounted(true);
   }, []);
-  console.log(resolvedTheme);
-
   const toggleModeButton = () => {
     if (resolvedTheme === "light") {
       setTheme("dark");
@@ -19,36 +17,40 @@ const ModeToggle = () => {
     }
   };
   return (
-    <div className=" w-[80px] h-[40px] bg-primary rounded-[129px] relative  px-[4px] py-[3px] ">
-      <div
-        onClick={toggleModeButton}
-        className={`h-[34px] w-[34px] rounded-[100%] absolute cursor-pointer ${
-          resolvedTheme === "dark" ? "bg-white" : "bg-status-warning-400"
-        } ${
-          resolvedTheme === "dark"
-            ? "transform translate-x-[2.4rem] "
-            : " transform translate-x-[0rem] "
-        }  transition-transform duration-700`}
-      ></div>
+    <>
+      {isMounted && (
+        <div className=" w-[80px] h-[40px] bg-primary rounded-[129px] relative  px-[4px] py-[3px] ">
+          <div
+            onClick={toggleModeButton}
+            className={`h-[34px] w-[34px] rounded-[100%] absolute cursor-pointer ${
+              resolvedTheme === "dark" ? "bg-white" : "bg-status-warning-400"
+            } ${
+              resolvedTheme === "dark"
+                ? "transform translate-x-[2.4rem] "
+                : " transform translate-x-[0rem] "
+            }  transition-transform duration-700`}
+          ></div>
 
-      <div
-        className={` ${
-          resolvedTheme === "dark" ? " hidden " : "block"
-        } absolute top-[50%] translate-y-[-50%] right-1 transition-all`}
-      >
-        {" "}
-        <Icon.Moon />{" "}
-      </div>
+          <div
+            className={` ${
+              resolvedTheme === "dark" ? " hidden " : "block"
+            } absolute top-[50%] translate-y-[-50%] right-1 transition-all`}
+          >
+            {" "}
+            <Icon.Moon />{" "}
+          </div>
 
-      <div
-        className={` ${
-          resolvedTheme === "light" ? "hidden" : "block"
-        } absolute top-[50%] translate-y-[-50%] transition-all `}
-      >
-        {" "}
-        <Icon.Sun />{" "}
-      </div>
-    </div>
+          <div
+            className={` ${
+              resolvedTheme === "light" ? "hidden" : "block"
+            } absolute top-[50%] translate-y-[-50%] transition-all `}
+          >
+            {" "}
+            <Icon.Sun />{" "}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

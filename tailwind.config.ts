@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#4C37F4",
+        primary_darker: "#1B1355",
         alt_primary: "#249CF3",
         aux: "#F0A9F9",
         tc: {

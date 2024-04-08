@@ -50,10 +50,12 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={` ${general.variable} bg-pc-almost_white `}>
+      <body
+        className={` ${general.variable} bg-pc-almost_white dark:bg-primary_darker `}
+      >
         <Providers>
           {children}
-          <p className=" mt-auto text-center pb-[24px] pt-[48px] 2xl:mt-[-48px] 2xl:pt-[0px] font-general text-tc-heading_gray ">
+          <p className=" mt-auto text-center pb-[24px] pt-[48px] 2xl:mt-[-48px] 2xl:pt-[0px] font-general text-tc-heading_gray dark:text-white ">
             {" "}
             Copyright © 2024 AstroXtrade - All Rights Reserved.{" "}
           </p>
