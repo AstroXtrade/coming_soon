@@ -21,7 +21,7 @@ export default function Home({
       <Navbar />
       <section className=" max-w-[75rem] mx-auto h-[90%] pt-[1.5rem] px-[1rem] relative ">
         <div className=" w-[40%] absolute right-0 top-[2%] 2xl:top-[10%]  ">
-          <Image src={lighImage} alt="world_map" />
+          <Image src={lighImage} alt="world_map" priority={true} />
         </div>
         <div className=" top-[-50%] translate-y-[5%] 2xl:translate-y-[20%]  ">
           <div className=" ">
@@ -60,7 +60,7 @@ export default function Home({
               <Button
                 type="submit"
                 btnText={t("subscribe")}
-                onClickFunction={handleFormSubmission}
+                // onClickFunction={handleFormSubmission}
               />
             </div>
             <div className=" w-fit justify-center mt-[40px] pb-[2rem]">
