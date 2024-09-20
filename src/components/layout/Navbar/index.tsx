@@ -46,7 +46,7 @@ const Navbar = () => {
           />
         </div>
       </section>
-      <section className=" max-[480px]:block hidden fixed h-fit w-fit py-[0.5rem] px-[1rem] rounded-full border border-primary_darker bg-pc-almost_white bottom-[1rem] z-10 mx-auto right-0 left-0  ">
+      <section className=" max-[480px]:block hidden fixed h-fit w-fit py-[0.5rem] px-[1rem] rounded-full border border-primary_darker bg-pc-almost_white bottom-[1rem] z-10 mx-auto right-0 left-0 dark:bg-status-warning-400 dark:border-pc-almost_white  ">
         <div className="flex gap-[12px] relative items-center">
           <LanguageSwitch />
           <ModeToggle />
