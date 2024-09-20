@@ -87,7 +87,7 @@ const LanguageSwitch = () => {
         </div>
       )}
       {showLangOptions && (
-        <div className="absolute top-[4.5rem] transition-all delay-75 bg-white z-30 py-[16px] px-[8px] flex flex-col gap-y-[16px] items-center border border-tc-text_gray rounded-md ">
+        <div className="absolute top-[4.5rem] transition-all delay-75 bg-white z-30 py-[16px] px-[8px] flex flex-col gap-y-[16px] items-center border border-tc-text_gray rounded-md max-[480px]:top-[-9.4rem] ">
           {availableLanguages.map((lang) => {
             return (
               <Link
